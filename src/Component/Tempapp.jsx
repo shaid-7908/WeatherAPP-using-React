@@ -18,7 +18,6 @@ const Tempapp=()=> {
             // console.log(resJson);
             setCity(resJson.main);
             }
-            
         }
         fetchApi();
     },[search]);
