@@ -4,6 +4,12 @@ const Tempapp=()=> {
 
     const [city, setCity]=useState(null);
     const [search, setSearch] = useState("Mumbai");
+    //Editing here==================================================================
+    const [incserach,setIncsearch]=useState("Mumbai");
+    const [timeo,setTimeo]=useState() 
+    const [dayo,setDayo]=useState()
+    const [montho,setMontho]=useState()
+    //==============================================================================
     let responce;
 
     useEffect(()=>{
@@ -61,7 +67,13 @@ const Tempapp=()=> {
             }
 
             let time=`${hour} : ${min} :${sec} ${period}`;
-            document.getElementById('cdate').innerHTML=`${getCurrentDay()} | ${getCurrentDate()} | ${time}`;
+            
+            //Edit here=================//
+             setTimeo(time);
+             setDayo(getCurrentDay());
+             setMontho(getCurrentDate()) ;
+            //==============================//
+           
         }
         
         setInterval(getCurrentTime,1000);
@@ -70,7 +82,11 @@ const Tempapp=()=> {
             <>
                 <div className='box'>
                     <div className="inputData">
-                        <input type="search" className="inputField" value={search} onChange={(event)=>{ setSearch(event.target.value) }}/>
+                       //Edit here===================//
+                        <input type="search" className="inputField" value={incserach} onChange={(event)=>{ setIncsearch(event.target.value) }}/>
+                        <button className='button'onClick={()=>setSearch(incserach)}> Get Weather </button>
+                      //===============================//
+                      
                     </div>
                 
                     {!city ? (
