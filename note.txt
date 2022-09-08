@@ -1,0 +1,5 @@
+Weather api
+
+key-> ccb6270eb8d0736e9d15a7dbda8386df
+
+https://api.openweathermap.org/data/2.5/weather?q=kolkata&appid=ccb6270eb8d0736e9d15a7dbda8386df
